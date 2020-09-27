@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox style="-fx-background-color: #CFCCDF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="admin.EmployeeSalaryController">
+   <children>
+      <HBox alignment="CENTER_RIGHT" prefHeight="59.0" prefWidth="600.0" spacing="7.0">
+         <children>
+            <TextField fx:id="empNameField" promptText="Enter Employee Name">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Button mnemonicParsing="false" onAction="#enterButtonAction" style="-fx-background-color: #2450B5;" text="Enter" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets right="5.0" />
+         </padding>
+      </HBox>
+      <TableView fx:id="empSalaryTable" style="-fx-background-color: #CFCCDF;">
+        <columns>
+          <TableColumn fx:id="nameCol" prefWidth="194.0" text="Employee Name" />
+          <TableColumn fx:id="salaryCol" prefWidth="103.0" text="Salary" />
+            <TableColumn fx:id="paidSalaryCol" prefWidth="97.0" text="Paid Salary" />
+            <TableColumn fx:id="monthCol" prefWidth="75.0" text="Month" />
+            <TableColumn fx:id="yearCol" prefWidth="66.0" text="Year" />
+            <TableColumn fx:id="dueCol" prefWidth="84.0" text="Due" />
+        </columns>
+      </TableView>
+      <HBox alignment="CENTER_RIGHT">
+         <children>
+            <Button mnemonicParsing="false" onAction="#updateButtonAction" style="-fx-background-color: #2450B5;" text="Update" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets right="5.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>

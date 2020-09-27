@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox spacing="10.0" style="-fx-background-color: #CFCCDF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="shopmanagement.SalesController">
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="40.0">
+         <children>
+            <Text fill="#900000" strokeType="OUTSIDE" strokeWidth="0.0" text="Sales">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Text>
+         </children>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER" spacing="7.0">
+         <children>
+            <VBox spacing="10.0" style="-fx-border-width: 0 2 0 0; -fx-border-color: gray;">
+               <children>
+                  <Text fill="#1b0606" strokeType="OUTSIDE" strokeWidth="0.0" text="Item">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <ChoiceBox fx:id="itemField" onMouseClicked="#itemFieldAction" prefHeight="35.0" prefWidth="300.0" />
+                  <Text fill="#1b0606" strokeType="OUTSIDE" strokeWidth="0.0" text="Available Quantity ">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="availableQntField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="300.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font></TextField>
+                  <Text fill="#1b0606" strokeType="OUTSIDE" strokeWidth="0.0" text="Price Per Unit">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="ppuField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="300.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font></TextField>
+                  <Text fill="#1b0606" strokeType="OUTSIDE" strokeWidth="0.0" text="Quanatity">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="quantityField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyReleased="#quantityFieldAction" prefHeight="35.0" prefWidth="300.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <Text fill="#1b0606" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Price">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="totalPriceField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="300.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font></TextField>
+               </children>
+               <padding>
+                  <Insets right="4.0" />
+               </padding>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" spacing="10.0">
+               <children>
+                  <Text fill="#1b0606" layoutX="10.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Name">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="customerNameField" layoutX="10.0" layoutY="155.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyReleased="#cusNameFieldAction" prefHeight="35.0" prefWidth="260.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <Text fill="#1b0606" layoutX="10.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Address">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="customerAdrsField" layoutX="10.0" layoutY="41.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="260.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <Text fill="#1b0606" layoutX="10.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact no.">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="contactField" layoutX="10.0" layoutY="117.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="260.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <Text fill="#1b0606" layoutX="10.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <DatePicker fx:id="dateField" prefHeight="35.0" prefWidth="260.0" />
+               </children>
+               <padding>
+                  <Insets right="3.0" />
+               </padding>
+            </VBox>
+         </children>
+         <padding>
+            <Insets left="4.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER_RIGHT" prefHeight="34.0">
+         <children>
+            <Button fx:id="sellButton" mnemonicParsing="false" onAction="#sellButtonAction" prefWidth="113.0" style="-fx-background-color: #2450B5; -fx-background-radius: 30;" text="Sell" textFill="#f2f2f2">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets right="10.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>
